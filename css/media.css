@@ -73,6 +73,12 @@
     width: 100%;
     margin-bottom: 35px;
   }
+  .contact .contact-row .contact-content {
+    padding: 50px 0;
+  }
+  .contact .contact-row .contact-right {
+    padding: 50px 0;
+  }
 }
 @media (max-width: 690px) {
   .container {
@@ -87,8 +93,29 @@
   .home .home-content a {
     font-size: 20px;
   }
-  .education .edu-content .card {
+  .experience .exp-content .card {
     width: 100%;
+  }
+  .contact .contact-row {
+    flex-direction: column;
+    padding: 0;
+  }
+  .contact .contact-row .contact-content {
+    padding: 0 0 10px 0;
+  }
+  .contact .contact-content .card {
+    width: 100%;
+    padding: 10px;
+  }
+  .contact .contact-row .contact-right {
+    padding: 0 0 10px 0;
+  }
+  .contact .contact-row .contact-right .text-social {
+    margin-top: 10px;
+  }
+  .contact .contact-right .card {
+    width: 100%;
+    padding: 10px;
   }
   .gallery .gallery-content .card {
     width: 100%;

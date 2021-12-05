@@ -33,10 +33,10 @@ section {
   margin: auto;
 }
 .wd-color {
-  color: blue;
+  color: #40e0d0;
 }
 .ww-color {
-  color: brown;
+  color: #ffa07a;
 }
 .de-color {
   color: var(--primary-color);
@@ -45,10 +45,10 @@ section {
   background: var(--primary-color);
 }
 .ww {
-  background: brown;
+  background: #ffa07a;
 }
 .wd {
-  background: blue;
+  background: #40e0d0;
 }
 
 .btn {
@@ -87,35 +87,35 @@ section {
 /* Button web developer */
 .btn-wd {
   display: inline-block;
-  background: blue;
+  background: #40e0d0;
   color: var(--light-color);
   font-size: 25px;
   padding: 12px 36px;
   margin-top: 20px;
   font-weight: 400;
   border-radius: 6px;
-  border: 2px solid blue;
+  border: 2px solid #40e0d0;
   transition: all 0.3s ease;
 }
 .btn-wd:hover {
-  color: blue;
+  color: #40e0d0;
   background: none;
 }
 /* Woodworker button */
 .btn-ww {
   display: inline-block;
-  background: brown;
+  background: #ffa07a;
   color: var(--light-color);
   font-size: 25px;
   padding: 12px 36px;
   margin-top: 20px;
   font-weight: 400;
   border-radius: 6px;
-  border: 2px solid brown;
+  border: 2px solid #ffa07a;
   transition: all 0.3s ease;
 }
 .btn-ww:hover {
-  color: brown;
+  color: #ffa07a;
   background: none;
 }
 
@@ -133,7 +133,7 @@ section {
 }
 
 .about,
-.education,
+.experience,
 .skills,
 .gallery,
 .contact,
@@ -141,9 +141,8 @@ footer {
   font-family: "Poppins", sans-serif;
 }
 .about .about-content,
-.education .edu-content,
+.experience .exp-content,
 .skills .skills-content,
-.contact .contact-content,
 .gallery .gallery-content {
   display: flex;
   flex-wrap: wrap;
@@ -180,10 +179,10 @@ section .title::after {
   transform: translateX(-50%);
 }
 section .title-wd::after {
-  color: blue;
+  color: #40e0d0;
 }
 section .title-ww::after {
-  color: brown;
+  color: #ffa07a;
 }
 /* navbar styling */
 .navbar {
@@ -233,11 +232,11 @@ section .title-ww::after {
 }
 /* navbar hover web developer */
 .navbar .menu .wd-color:hover {
-  color: blue;
+  color: #40e0d0;
 }
 /* navbar hover woodworker */
 .navbar .menu .ww-color:hover {
-  color: brown;
+  color: #ffa07a;
 }
 .navbar.sticky .menu li a:hover {
   color: var(--light-color);
@@ -288,13 +287,32 @@ section .title-ww::after {
 /* home section styling */
 .home {
   display: flex;
-  background: url("/images/banner.jpg") no-repeat center;
-  height: 100vh;
   color: var(--light-color);
+  font-family: "Ubuntu", sans-serif;
+}
+/* home background desing engineer */
+.home-de {
+  background: url("../images/banner1.webp") no-repeat center;
+  height: 100vh;
   min-height: 500px;
   background-size: cover;
   background-attachment: fixed;
-  font-family: "Ubuntu", sans-serif;
+}
+/* home background woodworking */
+.home-ww {
+  background: url("../images/banner2.webp") no-repeat center;
+  height: 100vh;
+  min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+/* home background desing engineer */
+.home-wd {
+  background: url("../images/banner3.webp") no-repeat center;
+  height: 100vh;
+  min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .home .container {
   width: 100%;
@@ -347,90 +365,57 @@ section .title-ww::after {
   text-align: justify;
 }
 
-/* education section styling */
-.education,
+/* experience section styling */
+.experience,
 .gallery {
   color: var(--light-color);
   background: var(--dark-color);
 }
-.education .title::before,
+.experience .title::before,
 .gallery .title::before {
   background: var(--light-color);
 }
-.education .title::after {
+.experience .title::after {
   background: var(--dark-color);
-  content: "what i studied";
+  content: "what i did and do";
 }
-.education .edu-content .card {
-  width: calc(33% - 20px);
+.experience .exp-content .card {
+  width: 45%;
   background: var(--secondary-color);
   text-align: center;
   border-radius: 6px;
   padding: 50px 25px;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin: 20px 5px;
 }
-.education .edu-content .card:hover {
+.experience .exp-content .card-de:hover {
   background: var(--primary-color);
 }
-.education .edu-content .card .box {
+.experience .exp-content .card-ww:hover {
+  background: #ffa07a;
+}
+.experience .exp-content .card-wd:hover {
+  background: #40e0d0;
+}
+.experience .exp-content .card .box {
   transition: all 0.3s ease;
 }
-.education .edu-content .card:hover .box {
+.experience .exp-content .card:hover .box {
   transform: scale(1.05);
 }
-.education .edu-content .card i {
+.experience .exp-content .card i {
   font-size: 50px;
   color: var(--primary-color);
   transition: color 0.3s ease;
 }
-.education .edu-content .card:hover i {
+.experience .exp-content .card:hover i {
   color: var(--light-color);
 }
-.education .edu-content .card .text {
+.experience .exp-content .card .text {
   font-size: 25px;
   font-weight: 500;
   margin: 10px 0 7px 0;
-}
-
-/* Gallery section  */
-
-.gallery .title::after {
-  background: var(--dark-color);
-  content: "My work";
-}
-.gallery .gallery-content .card {
-  width: calc(33% - 20px);
-  background: var(--secondary-color);
-  text-align: center;
-  border-radius: 6px;
-  padding: 10px 15px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.gallery .gallery-content .card-de:hover {
-  background: var(--primary-color);
-}
-/* galery hover woodworking */
-.gallery .gallery-content .card-ww:hover {
-  background: brown;
-}
-/* galery hover web design */
-.gallery .gallery-content .card-wd:hover {
-  background: blue;
-}
-.gallery .gallery-content .card .box {
-  transition: all 0.3s ease;
-}
-.gallery .gallery-content .card:hover .box {
-  transform: scale(1.05);
-}
-.gallery .gallery-content .card .box img {
-  width: 100%;
-  height: 100%;
-  border-radius: 5px;
-  margin: 0;
-  padding: 0;
 }
 
 /* skills section styling */
@@ -477,7 +462,7 @@ section .title-ww::after {
 }
 /* skill bar web design */
 .skills .skills-content .right .line-wd::before {
-  background: blue;
+  background: #40e0d0;
 }
 /* skill bar design engineer */
 .skills .skills-content .right .line-de::before {
@@ -485,7 +470,7 @@ section .title-ww::after {
 }
 /* skill bar wood worker */
 .skills .skills-content .right .line-ww::before {
-  background: brown;
+  background: #ffa07a;
 }
 .skills-content .right .creo::before {
   width: 80%;
@@ -502,82 +487,157 @@ section .title-ww::after {
 .skills-content .right .solid::before {
   width: 20%;
 }
+/* Gallery section  */
+
+.gallery .title::after {
+  background: var(--dark-color);
+  content: "My work";
+}
+.gallery .gallery-content .card {
+  width: calc(33% - 20px);
+  background: var(--secondary-color);
+  text-align: center;
+  border-radius: 6px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.gallery .gallery-content .card-de:hover {
+  background: var(--primary-color);
+}
+/* galery hover woodworking */
+.gallery .gallery-content .card-ww:hover {
+  background: #ffa07a;
+}
+/* galery hover web design */
+.gallery .gallery-content .card-wd:hover {
+  background: #40e0d0;
+}
+.gallery .gallery-content .card .box {
+  transition: all 0.3s ease;
+}
+.gallery .gallery-content .card:hover .box {
+  transform: scale(1.05);
+}
+.gallery .gallery-content .card .box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+}
 
 /* contact section styling */
 .contact .title::after {
   content: "get in touch";
 }
-.contact .contact-content .column {
-  width: calc(50% - 30px);
-}
-.contact .contact-content .text {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-.contact .contact-content .left p {
-  text-align: justify;
-}
-.contact .contact-content .left .icons {
-  margin: 10px 0;
-}
-.contact .contact-content .row {
+.contact .contact-row {
   display: flex;
-  height: 65px;
-  align-items: center;
+  justify-content: space-between;
 }
-.contact .contact-content .row .info {
-  margin-left: 30px;
-}
-.contact .contact-content .row i {
-  font-size: 25px;
-  color: var(--primary-color);
-}
-.contact .contact-content .info .head {
-  font-weight: 500;
-}
-.contact .contact-content .info .sub-title {
-  color: #333;
-}
-.contact .right form .fields {
+.contact .contact-row .contact-content {
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px 0 0 100px;
 }
-.contact .right form .field,
-.contact .right form .fields .field {
-  height: 45px;
-  width: 100%;
-  margin-bottom: 15px;
+.contact .contact-row .contact-content .card {
+  background: var(--secondary-color);
+  text-align: center;
+  margin: 10px;
+  padding: 10px 10px;
+  border-radius: 5px;
 }
-.contact .right form .textarea {
-  height: 80px;
-  width: 100%;
-}
-.contact .right form .name {
-  margin-right: 10px;
-}
-.contact .right form .field input,
-.contact .right form .textarea textarea {
-  height: 100%;
-  width: 100%;
-  border: 1px solid lightgrey;
-  border-radius: 6px;
-  outline: none;
-  padding: 0 15px;
-  font-size: 17px;
-  font-family: "Poppins", sans-serif;
+.contact .contact-row .contact-content .card-de:hover {
+  background: var(--primary-color);
   transition: all 0.3s ease;
+  transform: scale(1.05);
 }
-.contact .right form .field input:focus,
-.contact .right form .textarea textarea:focus {
-  border-color: #b3b3b3;
+.contact .contact-row .contact-content .card-ww:hover {
+  background: #ffa07a;
+  transition: all 0.3s ease;
+  transform: scale(1.05);
 }
-.contact .right form .textarea textarea {
-  padding-top: 10px;
-  resize: none;
+.contact .contact-row .contact-content .card-wd:hover {
+  background: #40e0d0;
+  transition: all 0.3s ease;
+  transform: scale(1.05);
 }
-.contact .right form .button-area {
+.contact .contact-row .contact-content .card .box {
+  color: var(--light-color);
+  font-size: 18px;
+  padding: 5px 0;
+}
+.contact .contact-row .contact-content .card .box .text-2 {
+  font-size: 22px;
+  padding: 5px 0;
+}
+.contact .contact-row .contact-content .card .box i {
+  font-size: 50px;
+  color: var(--light-color);
+  padding: 5px 0 10px 0;
+  transition: transform 1s;
+}
+.contact .contact-row .contact-content .card .box i:hover {
+  transform: rotate(100deg);
+  color: var(--dark-color);
+}
+
+/* contact right styles */
+.contact .contact-row .contact-right {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  padding: 20px 100px 0 0;
+}
+.contact .contact-row .contact-right .text-social {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  margin-top: -70px;
+  margin-bottom: 30px;
+}
+.contact .contact-row .contact-right .card {
+  background: var(--secondary-color);
+  text-align: center;
+  margin: 10px;
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+.contact .contact-row .contact-right .card-de:hover {
+  background: var(--primary-color);
+  transition: all 0.3s ease;
+  transform: scale(1.05);
+}
+.contact .contact-row .contact-right .card-ww:hover {
+  background: #ffa07a;
+  transition: all 0.3s ease;
+  transform: scale(1.05);
+}
+.contact .contact-row .contact-right .card-wd:hover {
+  background: #40e0d0;
+  transition: all 0.3s ease;
+  transform: scale(1.05);
+}
+.contact .contact-row .contact-right .card .box {
+  color: var(--light-color);
+  font-size: 18px;
+  padding: 5px 0;
+}
+.contact .contact-row .contact-right .card .box .text-2 {
+  color: var(--light-color);
+  font-size: 22px;
+  padding: 5px 0;
+}
+.contact .contact-row .contact-right .card .box i {
+  font-size: 50px;
+  color: var(--light-color);
+  padding: 5px 0 10px 0;
+  transition: transform 1s;
+}
+.contact .contact-row .contact-right .card .box i:hover {
+  transform: rotate(100deg);
+  color: var(--dark-color);
 }
 
 /* footer section styling */
@@ -588,11 +648,14 @@ footer {
   text-align: center;
 }
 footer span a {
-  color: var(--primary-color);
+  /* color: var(--primary-color); */
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 footer span a:hover {
-  text-decoration: underline;
+  transition: all 0.3s ease;
+  text-align: center;
+  font-size: 18px;
 }
 /* responsive media query start
 @media (max-width: 1104px) {
@@ -660,7 +723,7 @@ footer span a:hover {
   .about .about-content .right {
     flex: 100%;
   }
-  .education .edu-content .card {
+  .experience .edu-content .card {
     width: calc(50% - 10px);
     margin-bottom: 20px;
   }
