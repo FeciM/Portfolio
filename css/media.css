@@ -1,15 +1,3 @@
-/* responsive media query start */
-/* @media (max-width: 1104px) {
-  .about .about-content .left img {
-    height: 350px;
-    width: 350px;
-  }
-}
-@media (max-width: 991px) {
-  .container {
-    padding: 0 50px;
-  }
-} */
 @media (max-width: 1018px) {
   .menu-btn {
     display: block;
@@ -18,24 +6,38 @@
   .menu-btn i.active:before {
     content: "\f00d";
   }
-  .navbar .menu {
+  .navbar .container {
+    display: flex;
+    flex-direction: row;
+  }
+  .navbar .menu-left,
+  .navbar .menu-right {
     position: fixed;
     height: 100vh;
     width: 100%;
-    left: -100%;
+    left: 100%;
     top: 0;
     background: #111;
     text-align: center;
     padding-top: 80px;
     transition: all 0.3s ease;
   }
-  .navbar .menu.active {
+
+  .navbar .menu-left.active,
+  .navbar .menu-right.active {
     left: 0;
   }
-  .navbar .menu li {
+
+  .navbar .menu-right.active {
+    top: 300px;
+  }
+
+  .navbar .menu-left li,
+  .navbar .menu-right li {
     display: block;
   }
-  .navbar .menu li a {
+  .navbar .menu-left li a,
+  .navbar .menu-right li a {
     display: inline-block;
     margin: 20px 0;
     font-size: 25px;
